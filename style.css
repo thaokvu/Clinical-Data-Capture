@@ -1,0 +1,59 @@
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styles */
+button {
+    margin: 2px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:first-child {
+    background-color: #28a745; /* Green for Edit */
+    color: white;
+}
+
+button:first-child:hover {
+    background-color: #218838;
+}
+
+button:last-child {
+    background-color: #dc3545; /* Red for Delete */
+    color: white;
+}
+
+button:last-child:hover {
+    background-color: #c82333;
+}
