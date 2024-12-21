@@ -1,0 +1,54 @@
+<!--edit_patient.html - edit patient page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Patient</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        input, select, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Patient</h1>
+    <form action="/edit_patient/{{ patient.id }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ patient.name }}" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="{{ patient.age }}" required><br>
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="Hypertension" {% if patient.condition == 'Hypertension' %}selected{% endif %}>Hypertension</option>
+            <option value="Diabetes" {% if patient.condition == 'Diabetes' %}selected{% endif %}>Diabetes</option>
+            <option value="Heart Disease" {% if patient.condition == 'Heart Disease' %}selected{% endif %}>Heart Disease</option>
+            <option value="Asthma" {% if patient.condition == 'Asthma' %}selected{% endif %}>Asthma</option>
+        </select><br>
+        <label for="trial_status">Trial Status:</label>
+        <select id="trial_status" name="trial_status" required>
+            <option value="Enrolled" {% if patient.trial_status == 'Enrolled' %}selected{% endif %}>Enrolled</option>
+            <option value="Completed" {% if patient.trial_status == 'Completed' %}selected{% endif %}>Completed</option>
+            <option value="Dropped" {% if patient.trial_status == 'Dropped' %}selected{% endif %}>Dropped</option>
+        </select><br>
+        <button type="submit">Save</button>
+    </form>
+    <button onclick="window.location.href='/'">Cancel</button>
+</body>
+</html>
+
+
+

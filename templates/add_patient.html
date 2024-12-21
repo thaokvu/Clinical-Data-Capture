@@ -1,0 +1,76 @@
+<!--add_patient.html - add patient page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Patient</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .cancel-button {
+            background-color: #f44336;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New Patient</h1>
+    <form action="/add_patient" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter patient age" required>
+
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="" disabled selected>Select a condition</option>
+            <option value="Hypertension">Hypertension</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Heart Disease">Heart Disease</option>
+            <option value="Asthma">Asthma</option>
+        </select>
+
+        <label for="trial_status">Trial Status:</label>
+        <select id="trial_status" name="trial_status" required>
+            <option value="" disabled selected>Select trial status</option>
+            <option value="Enrolled">Enrolled</option>
+            <option value="Completed">Completed</option>
+            <option value="Dropped">Dropped</option>
+        </select>
+
+        <button type="submit">Add Patient</button>
+        <button type="button" class="cancel-button" onclick="window.location.href='/'">Cancel</button>
+    </form>
+</body>
+</html>
+
