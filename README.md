@@ -1,25 +1,25 @@
-# Clinical Data Capture System
-
-A lightweight web application for managing clinical trial data. This project provides a platform to add, edit, delete, and view patient information, including age, condition, and trial status.
+## Overview
+The Clinical Data Capture System is a lightweight web-based application for managing patient data in clinical trials. It allows users to add, edit, and delete patient information, providing a simple yet effective interface for data management.
 
 ## Features
 - Add Patients - Input patient details such as name, age, medical condition, and trial status
-- Edit Patient Data - Modify existing patient details
-- Delete Patient - Remove patients from the database
+- Edit Existing Patient Data - Modify existing patient details dynamically
+- Delete Patient - Remove patient data with a confirmation prompt to prevent accidental deletion
 - View Patient List - Display all patient records in a table format
-- Responsive Design - Clean, user-friendly interface
+- Responsive Design - User-friendly interface with a clean and modern design
 
 ## Technologies Used
-### Backend
-- **Python** - Programming Language
-- **Flask** - Lightweight web framework for backend development
-- **SQLALchemy** - Object-relational mapping (ORM) for handling database operations
-- **SQLite** - Lightweight relational database
-
 ### Frontend
-- **HTML5** - For structuring the web application
-- **CSS3** - For styling and enhancing the design
+- **HTML** - Structuring the web pagesfor displaying patient information and forms
+- **CSS** - Styling the interface to make it visually appealing and user-friendly
+- **JavaScript** - Adding interactivity, such as the confirmation dialog for deleting a patient
+- **Jinja2** - Template engine for dynamically rendering HTML content based on backend data
 
+### Backend
+- **Python** - Core programming language for backend logic
+- **Flask** - Framework for routing, handling HTTP requests, and managing server-side logic
+- **SQLite** - Lightweight database for storing and managing patient data
+- **SQLAlchemy** - Object-Relational Mapping (ORM) library for interacting with SQLite database
 
 ## Getting Started
 Follow these steps to set up and run the project locally.
@@ -32,13 +32,13 @@ Follow these steps to set up and run the project locally.
 1. **Clone the Repository**
    - git clone https://github.com/thaokvu/clinical-data-capture.git
    - cd clinical-data-capture
-2. **Install Dependencies** - Use the following command to install all required Python packages
+2. **Install Dependencies**
    - pip install -r requirements.txt
-3. **Set up the Database** - Run the following commands in a Python shell to create the database schema
+3. **Set up the Database** 
    - from main import db, app
    - with app.app_context():
    - db.create_all()
-4. **Start the application** - Run the Flask development server using the command
+4. **Start the application** 
    - python main.py
 5. **Access the Application** - Open your browser and navigate to: http://127.0.0.1:5000
 
@@ -68,25 +68,26 @@ This project follows a simple and organized structure to make the codebase easy 
   - Update the details in the form and save changes
 3. **Delete a Patient**
   - Click the "Delete" button in the patient's row on the homepage
-  - Confirm the deletion to remove the patient from the database
 4. **View All Patient**
   - The homepage displays a list of all patients in a table format, including their details and actions
 
 ## Screenshots
 
 ### **Homepage - Patient List**
-A clean table displaying all patients
-<img width="956" alt="Clinical Data Capture - index html" src="https://github.com/user-attachments/assets/db413c94-08db-4a81-a6a6-4e3b77c6fc1a" />
+<img width="959" alt="Clinical Data Capture System - Homepage (index html)" src="https://github.com/user-attachments/assets/65f1d6e3-1f0a-4cdd-8f04-c84f7dde3642" />
+<img width="959" alt="Clinical Data Capture System - Homepage with Added Patient" src="https://github.com/user-attachments/assets/af0406f9-3ab3-4e0c-b649-4116cad81a50" />
 
 ### **Add Patient Form**
-Form to input new patient details
-<img width="959" alt="Clinical Data Capture - add patient" src="https://github.com/user-attachments/assets/e50b3ee0-f043-4500-b17e-c7517a38e794" />
+<img width="959" alt="Clinical Data Capture System - Add Patient (add_patient html)" src="https://github.com/user-attachments/assets/5380d027-b2d4-4a4a-80f4-eabae06be7dd" />
+<img width="959" alt="Clinical Data Capture System - Add Patient (John Doe)" src="https://github.com/user-attachments/assets/96333898-9629-42ed-b585-17462193c292" />
 
 ### **Edit Patient Form**
-Form to update existing patient information
-<img width="958" alt="Clinical Data Capture - edit patient" src="https://github.com/user-attachments/assets/b3af954f-507a-4805-8203-6033abc7a710" />
+<img width="959" alt="Clinical Data Capture System - Edit Patient (edit_patient html)" src="https://github.com/user-attachments/assets/e939f8db-b56e-4917-b63f-b4a0caa61b93" />
 
-### **Customization**
-- To change the styling of the application, edit the ```static/style.css``` file
-- Update the database schema or models by modifying the
+### **Delete Patient Confirmation**
+<img width="959" alt="Clinical Data Capture System - Delete Patient Confirmation" src="https://github.com/user-attachments/assets/5b6b16a1-979a-4993-827f-d827ff817c2f" />
+
+### Clinical Data Capture System Demo
+https://github.com/user-attachments/assets/3ab59df9-8215-4f38-9f5c-cf6c1303ce30
+
 
