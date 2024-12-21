@@ -1,76 +1,127 @@
-<!--add_patient.html - add patient page -->
+<!-- add_patient.html - Add Patient Page -->
+<!-- 
+This HTML file provides an interface for adding a new patient's details to the system. 
+It includes fields for patient name, age, medical condition, and clinical trial status. 
+The form submits the data via a POST request to the `/add_patient` route of the Flask application. 
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for responsive and proper rendering -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Patient</title>
+    <title>Add Patient</title>
     <style>
+        /* Basic styling for body and container */
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fc; /* Light background for better readability */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Vertically center the content */
+        }
+        .container {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+        }
+        h1 {
+            color: hsl(189, 100%, 56%); 
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
         form {
-            max-width: 500px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
+        label, input, select, button {
+            width: 100%; 
+            margin: 10px 0;
+            font-size: 1em;
         }
-        input, select, button {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
+        input, select {
+            padding: 10px;
+            border: 1px solid #d1d9e6;
             border-radius: 4px;
+            text-align: center;
+            background-color: #f9f9f9; 
+            color: #333;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border: 1px solid hsl(189, 100%, 56%);
+            box-shadow: 0 0 5px hsl(189, 100%, 56%);
         }
         button {
-            background-color: #4CAF50;
+            padding: 10px 15px;
             color: white;
+            background-color: hsl(189, 100%, 56%);
             border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: hsl(189, 80%, 50%);
         }
-        .cancel-button {
-            background-color: #f44336;
-            margin-top: -10px;
+        .back-button {
+            margin-top: 20px;
+            color: hsl(189, 100%, 56%);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-button:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Add New Patient</h1>
-    <form action="/add_patient" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+    <div class="container">
+        <!-- Page Header -->
+        <h1>Add New Patient</h1>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Enter patient age" required>
+        <!-- Form for adding a new patient -->
+        <form action="/add_patient" method="POST">
+            <!-- Patient name input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+            
+            <!-- Patient age input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter patient age" required>
+            
+            <!-- Dropdown for medical condition -->
+            <label for="condition">Condition:</label>
+            <select id="condition" name="condition" required>
+                <option value="" disabled selected>Select Condition</option>
+                <option value="Hypertension">Hypertension</option>
+                <option value="Diabetes">Diabetes</option>
+                <option value="Heart Disease">Heart Disease</option>
+                <option value="Asthma">Asthma</option>
+            </select>
+            
+            <!-- Dropdown for trial status -->
+            <label for="trial_status">Trial Status:</label>
+            <select id="trial_status" name="trial_status" required>
+                <option value="" disabled selected>Select Trial Status</option>
+                <option value="Enrolled">Enrolled</option>
+                <option value="Completed">Completed</option>
+                <option value="Dropped">Dropped</option>
+            </select>
+            
+            <!-- Submit button to add patient -->
+            <button type="submit">Add Patient</button>
+        </form>
 
-        <label for="condition">Condition:</label>
-        <select id="condition" name="condition" required>
-            <option value="" disabled selected>Select a condition</option>
-            <option value="Hypertension">Hypertension</option>
-            <option value="Diabetes">Diabetes</option>
-            <option value="Heart Disease">Heart Disease</option>
-            <option value="Asthma">Asthma</option>
-        </select>
-
-        <label for="trial_status">Trial Status:</label>
-        <select id="trial_status" name="trial_status" required>
-            <option value="" disabled selected>Select trial status</option>
-            <option value="Enrolled">Enrolled</option>
-            <option value="Completed">Completed</option>
-            <option value="Dropped">Dropped</option>
-        </select>
-
-        <button type="submit">Add Patient</button>
-        <button type="button" class="cancel-button" onclick="window.location.href='/'">Cancel</button>
-    </form>
+        <!-- Link to navigate back to the homepage -->
+        <a href="/" class="back-button">Back to Homepage</a>
+    </div>
 </body>
 </html>
-
