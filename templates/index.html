@@ -1,44 +1,59 @@
-<!-- index.html - homepage --> 
+<!-- index.html - Homepage -->
+<!-- 
+Purpose: 
+This is the homepage of the Clinical Data Capture System. It provides an interface to view a table 
+of all patient data, add new patients, and perform actions such as editing or deleting patient records. 
+Dynamic content is handled using Jinja2 templating to populate the table with patient information.
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinical Data Capture System</title>
     <style>
+        /* Basic styling for the body */
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            margin: 20px;
+            margin: 20px; /* Adds padding around the page content */
         }
+        /* Table styles for patient data display */
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: collapse; /* Ensures no double borders */
         }
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid black; /* Adds borders to table cells */
         }
         th, td {
-            padding: 10px;
-            text-align: left;
+            padding: 10px; /* Adds spacing inside cells for readability */
+            text-align: left; /* Aligns text to the left in cells */
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #f2f2f2; /* Light gray background for header row */
         }
+        /* Button styling for actions */
         button {
-            padding: 5px 10px;
-            cursor: pointer;
+            padding: 5px 10px; /* Adds padding to buttons */
+            cursor: pointer; /* Changes cursor to pointer on hover */
         }
     </style>
 </head>
 <body>
+    <!-- Page Title -->
     <h1>Clinical Data Capture System</h1>
 
+    <!-- Form to add a new patient -->
     <form action="/add_patient" method="POST">
+        <!-- Input field for patient's name -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
+        <!-- Input field for patient's age -->
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" required>
+        <!-- Dropdown menu for patient's condition -->
         <label for="condition">Condition:</label>
         <select id="condition" name="condition" required>
             <option value="Hypertension">Hypertension</option>
@@ -46,23 +61,28 @@
             <option value="Heart Disease">Heart Disease</option>
             <option value="Asthma">Asthma</option>
         </select>
+        <!-- Dropdown menu for patient's trial status -->
         <label for="trial_status">Trial Status:</label>
         <select id="trial_status" name="trial_status" required>
             <option value="Enrolled">Enrolled</option>
             <option value="Completed">Completed</option>
             <option value="Dropped">Dropped</option>
         </select>
+        <!-- Submit button to add patient -->
         <button type="submit">Add Patient</button>
     </form>
 
+    <!-- Table to display existing patient data -->
     <table>
         <tr>
+            <!-- Column headers -->
             <th>Name</th>
             <th>Age</th>
             <th>Condition</th>
             <th>Trial Status</th>
             <th>Actions</th>
         </tr>
+        <!-- Loop to dynamically populate rows with patient data -->
         {% for patient in patients %}
         <tr>
             <td>{{ patient.name }}</td>
@@ -70,7 +90,9 @@
             <td>{{ patient.condition }}</td>
             <td>{{ patient.trial_status }}</td>
             <td>
+                <!-- Button to edit the patient's details -->
                 <button onclick="window.location.href='/edit_patient/{{ patient.id }}'">Edit</button>
+                <!-- Form to delete the patient -->
                 <form action="/delete_patient/{{ patient.id }}" method="post" style="display:inline;">
                     <button type="submit">Delete</button>
                 </form>                
@@ -80,7 +102,3 @@
     </table>
 </body>
 </html>
-
-
-
-
