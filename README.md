@@ -10,7 +10,7 @@ The Clinical Data Capture System is a lightweight web-based application for mana
 
 ## Technologies Used
 ### Frontend
-- **HTML** - Structuring the web pagesfor displaying patient information and forms
+- **HTML** - Structuring the web pages for displaying patient information and forms
 - **CSS** - Styling the interface to make it visually appealing and user-friendly
 - **JavaScript** - Adding interactivity, such as the confirmation dialog for deleting a patient
 - **Jinja2** - Template engine for dynamically rendering HTML content based on backend data
@@ -23,7 +23,6 @@ The Clinical Data Capture System is a lightweight web-based application for mana
 
 ## Getting Started
 Follow these steps to set up and run the project locally.
-
 ### Prerequisites
 - **Python 3.10+** installed on your machine
 - **Python package manager (pip)** installed
@@ -38,7 +37,7 @@ Follow these steps to set up and run the project locally.
    - from main import db, app
    - with app.app_context():
    - db.create_all()
-4. **Start the application** 
+4. **Start the Application** 
    - python main.py
 5. **Access the Application** - Open your browser and navigate to: http://127.0.0.1:5000
 
