@@ -72,18 +72,22 @@ This project follows a simple and organized structure to make the codebase easy 
 
 ## Screenshots
 
-### **Homepage - Patient List**
+### **Homepage - List of Patients**
+The table should display patient details (name, age, condition, trial status) with action buttons for "Edit" and "Delete".
 <img width="959" alt="Clinical Data Capture System - Homepage (index html)" src="https://github.com/user-attachments/assets/65f1d6e3-1f0a-4cdd-8f04-c84f7dde3642" />
 <img width="959" alt="Clinical Data Capture System - Homepage with Added Patient" src="https://github.com/user-attachments/assets/af0406f9-3ab3-4e0c-b649-4116cad81a50" />
 
-### **Add Patient Form**
+### **Add Patient Page**
+Users can input details for a new patient.
 <img width="959" alt="Clinical Data Capture System - Add Patient (add_patient html)" src="https://github.com/user-attachments/assets/5380d027-b2d4-4a4a-80f4-eabae06be7dd" />
 <img width="959" alt="Clinical Data Capture System - Add Patient (John Doe)" src="https://github.com/user-attachments/assets/96333898-9629-42ed-b585-17462193c292" />
 
-### **Edit Patient Form**
+### **Edit Patient Page**
+Users can update patient information. The form is pre-filled with existing patient details for easy editing.
 <img width="959" alt="Clinical Data Capture System - Edit Patient (edit_patient html)" src="https://github.com/user-attachments/assets/e939f8db-b56e-4917-b63f-b4a0caa61b93" />
 
-### **Delete Patient Confirmation**
+### **Delete Patient Confirmation Dialog**
+Confirmation dialog that appears when the "Delete" button is pressed. The dialog helps prevent accidental deletions by asking the user for confirmation before proceeding.
 <img width="959" alt="Clinical Data Capture System - Delete Patient Confirmation" src="https://github.com/user-attachments/assets/5b6b16a1-979a-4993-827f-d827ff817c2f" />
 
 ### Clinical Data Capture System Demo
