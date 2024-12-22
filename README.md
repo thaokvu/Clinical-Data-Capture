@@ -1,5 +1,5 @@
 ## Overview
-The Clinical Data Capture System is a lightweight web-based application for managing patient data in clinical trials. It allows users to add, edit, and delete patient information, providing a simple yet effective interface for data management.
+A web-based application for managing patient information in clinical trials. This system allows users to add, view, edit, and delete patient records while ensuring a user-friendly interface and robust backend functionality. Built using Flask, SQLAlchemy, and Jinja2, the project seamlessly integrates front-end design and back-end logic for managing clinical data efficiently.
 
 ## Features
 - Add Patients - Input patient details such as name, age, medical condition, and trial status
