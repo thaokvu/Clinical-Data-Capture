@@ -1,4 +1,6 @@
-[## Overview
+# Clincial Data Capture System
+
+## Overview
 A web-based application for managing patient information in clinical trials. This system allows users to add, view, edit, and delete patient records while ensuring a user-friendly interface and robust backend functionality. Built using Flask, SQLAlchemy, and Jinja2, the project seamlessly integrates front-end design and back-end logic for managing clinical data efficiently.
 
 ## Features
@@ -9,49 +11,55 @@ A web-based application for managing patient information in clinical trials. Thi
 - Responsive Design - User-friendly interface with a clean and modern design
 
 ## Technologies Used
+### Backend
+- **Python** - Core programming language for backend logic
+- **Flask** - Framework for routing, handling HTTP requests, and managing server-side logic
+- **SQLite** - Lightweight database for storing and managing patient data
+- **SQLAlchemy** - Object-Relational Mapping (ORM) library for interacting with SQLite database
+  
 ### Frontend
 - **HTML** - Structuring the web pages for displaying patient information and forms
 - **CSS** - Styling the interface to make it visually appealing and user-friendly
 - **JavaScript** - Adding interactivity, such as the confirmation dialog for deleting a patient
 - **Jinja2** - Template engine for dynamically rendering HTML content based on backend data
 
-### Backend
-- **Python** - Core programming language for backend logic
-- **Flask** - Framework for routing, handling HTTP requests, and managing server-side logic
-- **SQLite** - Lightweight database for storing and managing patient data
-- **SQLAlchemy** - Object-Relational Mapping (ORM) library for interacting with SQLite database
-
-## Getting Started
-Follow these steps to set up and run the project locally.
 ### Prerequisites
-- **Python 3.10+** installed on your machine
-- **Python package manager (pip)** installed
-
+- Python 3.10+
+- Flask
+- **Flask-SQLAlchemy**
+  
 ### Installation
 1. **Clone the Repository**
-   ```bash
+```bash
    git clone https://github.com/thaokvu/clinical-data-capture.git
    cd clinical-data-capture
    ```
    
-3. **Install Dependencies**
-   ```bash
+2. **Install Dependencies**
+```bash
    pip install -r requirements.txt
+
+   # If you don't have a requirements.txt, manually install the dependencies
+   pip install flask flask-sqlalchemy
    ```
    
-4. **Set up the Database**
-   ```bash
-   from main import db, app
-   with app.app_context():
-   db.create_all()
+3. **Set up the Database**
+```bash
+from main import db, app
+with app.app_context():
+db.create_all()
+
+# You can manually create the database tables by ensuring the db.create_all() function is executed in the app.py file
    ```
-   
-6. **Start the Application**
-   ```bash
+
+4. **Start the Application**
+```bash
    python main.py
    ```
-   
-8. **Access the Application** - Open your browser and navigate to: http://127.0.0.1:5000
+
+5. **Access the Application**
+Open a web browser and go to the following URL -
+`http://127.0.0.1:5000/`
 
 ## Project Structure
 This project follows a simple and organized structure to make the codebase easy to understand and maintain. 
