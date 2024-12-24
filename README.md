@@ -1,4 +1,4 @@
-## Overview
+[## Overview
 A web-based application for managing patient information in clinical trials. This system allows users to add, view, edit, and delete patient records while ensuring a user-friendly interface and robust backend functionality. Built using Flask, SQLAlchemy, and Jinja2, the project seamlessly integrates front-end design and back-end logic for managing clinical data efficiently.
 
 ## Features
@@ -85,24 +85,28 @@ This project follows a simple and organized structure to make the codebase easy 
 ## Screenshots
 
 ### **Homepage - List of Patients**
-The table should display patient details (name, age, condition, trial status) with action buttons for "Edit" and "Delete".
+`http://127.0.0.1:5000/`
+- The table should display patient details (name, age, condition, trial status) with action buttons for "Edit" and "Delete".
 <img width="959" alt="Clinical Data Capture System - Homepage (index html)" src="https://github.com/user-attachments/assets/65f1d6e3-1f0a-4cdd-8f04-c84f7dde3642" />
 <img width="959" alt="Clinical Data Capture System - Homepage with Added Patient" src="https://github.com/user-attachments/assets/af0406f9-3ab3-4e0c-b649-4116cad81a50" />
 
 ### **Add Patient Page**
-Users can input details for a new patient.
+`http://127.0.0.1:5000/add_patient`
+- Users can input details for a new patient.
 <img width="959" alt="Clinical Data Capture System - Add Patient (add_patient html)" src="https://github.com/user-attachments/assets/5380d027-b2d4-4a4a-80f4-eabae06be7dd" />
 <img width="959" alt="Clinical Data Capture System - Add Patient (John Doe)" src="https://github.com/user-attachments/assets/96333898-9629-42ed-b585-17462193c292" />
 
 ### **Edit Patient Page**
-Users can update patient information. The form is pre-filled with existing patient details for easy editing.
+`http://127.0.0.1:5000/edit_patient/1`
+- Users can update patient information. The form is pre-filled with existing patient details for easy editing.
 <img width="959" alt="Clinical Data Capture System - Edit Patient (edit_patient html)" src="https://github.com/user-attachments/assets/e939f8db-b56e-4917-b63f-b4a0caa61b93" />
 
 ### **Delete Patient Confirmation Dialog**
-Confirmation dialog that appears when the "Delete" button is pressed. The dialog helps prevent accidental deletions by asking the user for confirmation before proceeding.
+- Confirmation dialog that appears when the "Delete" button is pressed. The dialog helps prevent accidental deletions by asking the user for confirmation before proceeding.
 <img width="959" alt="Clinical Data Capture System - Delete Patient Confirmation" src="https://github.com/user-attachments/assets/5b6b16a1-979a-4993-827f-d827ff817c2f" />
 
 ### Clinical Data Capture System Demo
-https://github.com/user-attachments/assets/3ab59df9-8215-4f38-9f5c-cf6c1303ce30
+https://github.com/user-attachments/assets/23a67082-1c91-4942-888f-bba7465ab1e7
+
 
 
