@@ -29,17 +29,29 @@ Follow these steps to set up and run the project locally.
 
 ### Installation
 1. **Clone the Repository**
-   - git clone https://github.com/thaokvu/clinical-data-capture.git
-   - cd clinical-data-capture
-2. **Install Dependencies**
-   - pip install -r requirements.txt
-3. **Set up the Database** 
-   - from main import db, app
-   - with app.app_context():
-   - db.create_all()
-4. **Start the Application** 
-   - python main.py
-5. **Access the Application** - Open your browser and navigate to: http://127.0.0.1:5000
+   ```bash
+   git clone https://github.com/thaokvu/clinical-data-capture.git
+   cd clinical-data-capture
+   ```
+   
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+4. **Set up the Database**
+   ```bash
+   from main import db, app
+   with app.app_context():
+   db.create_all()
+   ```
+   
+6. **Start the Application**
+   ```bash
+   python main.py
+   ```
+   
+8. **Access the Application** - Open your browser and navigate to: http://127.0.0.1:5000
 
 ## Project Structure
 This project follows a simple and organized structure to make the codebase easy to understand and maintain. 
@@ -48,14 +60,14 @@ This project follows a simple and organized structure to make the codebase easy 
 <img width="482" alt="image" src="https://github.com/user-attachments/assets/6e3cbb9d-85e2-4a83-8c64-896099aa645e" />
 
 ### Folder and File Description
-- **static/style.css** - Contains custom CSS to style the web pages and improve the user interface
-- **templates/** - Holds all the HTML templates for the web application
-    - **add_patient.html** - Displays the form for adding a new patient
-    - **index_html** - The main page that lists all patients in the database
-    - **edit_patient.html** - Displays the form for editing patient details
-- **clinical_data.db** - The SQLite database file where patient information is stored; it is auto-generated when the application is run for the first time
-- **main.py** - The main Flask application file that contains the app routes and logic
-- **requirements.txt** - Lists all the Python dependencies required to run the project
+- **`static/style.css`** - Contains custom CSS to style the web pages and improve the user interface
+- **`templates/`** - Holds all the HTML templates for the web application
+    - **`add_patient.html`** - Displays the form for adding a new patient
+    - **`index_html`** - The main page that lists all patients in the database
+    - **`edit_patient.html`** - Displays the form for editing patient details
+- **`clinical_data.db`** - The SQLite database file where patient information is stored; it is auto-generated when the application is run for the first time
+- **`main.py`** - The main Flask application file that contains the app routes and logic
+- **`requirements.txt`** - Lists all the Python dependencies required to run the project
 - **README.md** - Project documentation that explains how to set up and use the application
 
 ### Usage
